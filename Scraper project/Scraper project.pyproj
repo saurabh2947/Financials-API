@@ -4,13 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>00038063-bd0b-46de-aa29-dc3207eae1c8</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Scraper_project.py</StartupFile>
+    <StartupFile>Iterative crawler.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>Scraper project</Name>
     <RootNamespace>Scraper project</RootNamespace>
+    <InterpreterId>MSBuild|Scraping|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +22,21 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Scraper_project.py" />
+    <Compile Include="Link crawler.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Iterative crawler.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="Scraping\">
+      <Id>Scraping</Id>
+      <Version>3.7</Version>
+      <Description>Scraping (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

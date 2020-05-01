@@ -1,0 +1,8 @@
+- plugin: w3-total-cache
+  matches:
+    - header:
+        name: X-Powered-By
+        value: W3 Total Cache/0.9.6
+      version: 0.9.6
+    - xpath: <html><!-- Performance optimized by W3 Total Cache --></html>
+      presence: true

@@ -1,0 +1,10 @@
+- plugin: nginx
+  matches:
+    - header:
+        name: Server
+        value: nginx/1.1.19
+      version: 1.1.19
+    - header:
+        name: Server
+        value: nginx
+      presence: true
