@@ -22,10 +22,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Link crawler.py">
+    <Compile Include="Iterative crawler.py" />
+    <Compile Include="Financials.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Iterative crawler.py" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="Scraping\">
