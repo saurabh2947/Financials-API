@@ -2,7 +2,7 @@ import xbrl, re
 import pandas as pd
 
 class financials:
-    def __init__(self,sc):
+    def __init__(self,sc=50096):
         self.scripcode=sc
 
     def bse_xmlparser(self):
@@ -12,7 +12,7 @@ class financials:
 
         #parsing the XML file
         print('Initializing...')
-        path="XML Files\\"
+        path="XML files\\"
         extension='.xml'
         filename=path+str(self.scripcode)+extension
         doc=str(xbrl.XBRLParser.parse(open(filename)))

@@ -11,7 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>Scraper project</Name>
     <RootNamespace>Scraper project</RootNamespace>
-    <InterpreterId>MSBuild|Scraping|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|Essentials|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,10 +28,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="Scraping\">
-      <Id>Scraping</Id>
+    <Interpreter Include="Essentials\">
+      <Id>Essentials</Id>
       <Version>3.7</Version>
-      <Description>Scraping (Python 3.7 (64-bit))</Description>
+      <Description>Essentials (Python 3.7 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
