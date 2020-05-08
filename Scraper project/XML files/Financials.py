@@ -12,9 +12,8 @@ class financials:
 
         #parsing the XML file
         print('Initializing...')
-        path="XML files\\"
         extension='.xml'
-        filename=path+str(self.scripcode)+extension
+        filename=str(self.scripcode)+extension
         doc=str(xbrl.XBRLParser.parse(open(filename)))
 
         #cleaning the doc
@@ -24,6 +23,7 @@ class financials:
         print('Doc cleaned')
 
         #getting contextref
+
         cntxt=re.compile(r'contextref=\"(.*?)\"')
         j=cntxt.findall(cleandoc)
         df['Context']=j
@@ -40,7 +40,7 @@ class financials:
 
         #sending the dataframe to csv
         df.set_index('keys',inplace=True)
-        df.to_csv(path+str(self.scripcode)+'.csv')
+        df.to_csv(str(self.scripcode)+'.csv')
         print('Done')
 
 sc=input('Enter Scrip code:')

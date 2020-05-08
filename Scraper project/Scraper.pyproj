@@ -5,7 +5,7 @@
     <ProjectGuid>00038063-bd0b-46de-aa29-dc3207eae1c8</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Iterative crawler.py</StartupFile>
+    <StartupFile>Scripcodes\rediff_scripcodes.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,8 +23,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Iterative crawler.py" />
-    <Compile Include="Financials.py">
+    <Compile Include="Scripcodes\rediff_scripcodes.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripcodes\throttle.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XML files\Financials.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripcodes\download.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -41,6 +49,15 @@
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="MSBuild|Essentials|C:\Users\Diablo\OneDrive - Vulcan technologies\Project_News App\saurabh2947\Scraper-project\Scraper project\Scraper.pyproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scripcodes\" />
+    <Folder Include="XML files\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripcodes\scripcodes.csv" />
+    <Content Include="XML files\50096.csv" />
+    <Content Include="XML files\50096.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
